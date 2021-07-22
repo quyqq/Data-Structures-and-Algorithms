@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Author: Quyet Quang Quy 12118217
+    Date: 15/04/2020
+    Version: 1.0
+-->
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="651.0" prefWidth="1042.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ReprotsController">
+   <children>
+      <SplitPane dividerPositions="0.29738058551617874" layoutX="177.0" layoutY="100.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane maxHeight="190.0" minHeight="61.0" prefHeight="61.0" prefWidth="1040.0">
+               <children>
+                  <ComboBox fx:id="combLocation" disable="true" layoutX="320.0" layoutY="24.0" prefHeight="34.0" prefWidth="342.0" promptText="Please select location" />
+                  <CheckBox fx:id="checkBoxLocation" layoutX="674.0" layoutY="33.0" mnemonicParsing="false" onAction="#checkBoxLocationAction" text="Location" />
+                  <CheckBox fx:id="checkBoxGender" layoutX="674.0" layoutY="86.0" mnemonicParsing="false" onAction="#checkBoxGenderAction" text="Gender" />
+                  <ComboBox fx:id="combGender" disable="true" layoutX="320.0" layoutY="77.0" prefHeight="34.0" prefWidth="342.0" promptText="Please select gender" />
+                  <Button fx:id="buttonReport" layoutX="320.0" layoutY="130.0" mnemonicParsing="false" onAction="#buttonReportAction" prefHeight="38.0" prefWidth="342.0" text="Generate report" />
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <VBox layoutX="252.0" layoutY="39.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TableView fx:id="tableReport" prefHeight="437.0" prefWidth="1040.0">
+                          <columns>
+                            <TableColumn fx:id="cloumnPostCode" prefWidth="90.0" text="Post Code" />
+                            <TableColumn fx:id="columnLocationName" prefWidth="298.0" text="Location Name" />
+                              <TableColumn fx:id="columnIncomeSource" prefWidth="135.0" text="Income Source" />
+                              <TableColumn fx:id="columnWeeklyIncoe" prefWidth="136.0" text="Weekly Income" />
+                              <TableColumn fx:id="columnAgeCategory" prefWidth="119.0" text="Age Category" />
+                              <TableColumn fx:id="columnGender" prefWidth="85.0" text="Gender" />
+                              <TableColumn fx:id="columnNumberOfPeople" prefWidth="163.0" text="Number of People" />
+                          </columns>
+                        </TableView>
+                        <Pane prefHeight="87.0" prefWidth="1040.0">
+                           <children>
+                              <TextField fx:id="textTotalLocation" editable="false" layoutX="25.0" layoutY="10.0" prefHeight="34.0" prefWidth="330.0" />
+                              <TextField fx:id="textTotalPeople" editable="false" layoutX="686.0" layoutY="9.0" prefHeight="34.0" prefWidth="330.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+   <stylesheets>
+      <URL value="@../CssStyles/MainStyle.css" />
+      <URL value="@../CssStyles/DialogStyle.css" />
+   </stylesheets>
+</AnchorPane>

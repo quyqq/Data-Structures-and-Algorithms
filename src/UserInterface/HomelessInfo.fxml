@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Author: Quyet Quang Quy 12118217
+    Date: 15/04/2020
+    Version: 1.0
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="1329.0" stylesheets="@../CssStyles/MainStyle.css" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.HomelessInfoController">
+   <children>
+      <SplitPane fx:id="mainSpliter" dividerPositions="0.3154121863799283" layoutX="24.0" layoutY="131.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane maxWidth="300.0" minHeight="0.0" minWidth="300.0" prefHeight="580.0" prefWidth="300.0">
+               <children>
+                  <VBox layoutX="113.0" layoutY="25.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox prefHeight="47.0" prefWidth="300.0">
+                           <children>
+                              <Button fx:id="buttonOpenFile" mnemonicParsing="false" onAction="#buttonOpenFileAction" prefHeight="48.0" prefWidth="300.0" text="Import file">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="107.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="47.0" prefWidth="300.0">
+                           <children>
+                              <Button fx:id="buttonLocation" mnemonicParsing="false" onAction="#buttonLocationAction" prefHeight="48.0" prefWidth="300.0" text="Add Location" HBox.hgrow="ALWAYS" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="47.0" prefWidth="300.0">
+                           <children>
+                              <Button fx:id="buttonTenant" mnemonicParsing="false" onAction="#buttonTenantAction" prefHeight="48.0" prefWidth="300.0" text="Add Tenant" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="47.0" prefWidth="300.0">
+                           <children>
+                              <Button fx:id="buttonReport" mnemonicParsing="false" onAction="#buttonReportAction" prefHeight="48.0" prefWidth="300.0" text="Report" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox layoutX="223.0" layoutY="70.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Pane prefHeight="110.0" prefWidth="697.0">
+                           <children>
+                              <TextField fx:id="textKeyWord" layoutX="207.0" layoutY="39.0" onKeyTyped="#textKeywordTyped" prefHeight="38.0" prefWidth="480.0" promptText="Please enter any keyword" />
+                              <Button fx:id="buttonSearch" layoutX="713.0" layoutY="39.0" mnemonicParsing="false" onAction="#buttonSearchAction" prefHeight="38.0" prefWidth="132.0" text="Search" />
+                           </children>
+                        </Pane>
+                        <TableView fx:id="tableViewListSearched" prefHeight="381.0" prefWidth="697.0" VBox.vgrow="ALWAYS">
+                          <columns>
+                              <TableColumn fx:id="cloumnPostCode" prefWidth="90.0" text="Post Code" />
+                              <TableColumn fx:id="columnLocationName" prefWidth="263.0" text="Location Name" />
+                              <TableColumn fx:id="columnIncomeSource" prefWidth="128.0" text="Income Source" />
+                              <TableColumn fx:id="columnWeeklyIncoe" prefWidth="135.0" text="Weekly Income" />
+                              <TableColumn fx:id="columnAgeCategory" prefWidth="126.0" text="Age Category" />
+                              <TableColumn fx:id="columnGender" prefWidth="83.0" text="Gender" />
+                              <TableColumn fx:id="columnNumberOfPeople" prefWidth="162.0" text="Number of People" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

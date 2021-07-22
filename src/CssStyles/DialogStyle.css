@@ -1,0 +1,37 @@
+/*
+ * Author: Group work (Miklos Lissa (12123973) - Quyet Quang Quuy (12118217))
+ * Date: 15/04/2020
+ * Version: 1.0
+ * Style Sheet: DialogStyle
+ * Modified colour and shape of user interface
+ * */
+
+.button:pressed{/*for pressing action*/
+    -fx-background-color: #0C644E;
+}
+.tab-pane .tab-header-area{/*set color for tab header of tabControl*/
+    visibility: hidden;
+}
+
+.tab-pane{/*set color for tabs*/
+    -fx-background-color: #DFF3EB;
+}
+.label{/*set colour for label only*/
+    -fx-text-fill: #0C644E;
+}
+.combo-box{/*for all combobox*/
+    -fx-font-size: 13;
+    -fx-font-weight: bold;
+    -fx-background-color: #0C644E;
+
+}
+.combo-box > .list-cell/*for all combobox dropdown list*/
+{
+    -fx-text-fill: white;
+}
+.text-field/*for textfield*/
+{
+    -fx-font-size: 13;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+}

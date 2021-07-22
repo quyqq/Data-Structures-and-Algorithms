@@ -1,0 +1,133 @@
+/*
+ * Group work (Miklos Lissa (12123973) - Quyet Quang Quuy (12118217))
+ * Date: 15/04/2020
+ * Version: 1.0
+ * Style Sheet: MainStyle
+ * Modified colour and shape of user interface
+ * */
+
+.tree-table-row-cell,
+.table-row-cell {/*for a cell of treeTableView*/
+    -fx-font-size: 13;
+}
+
+.tree-table-cell{
+    -fx-text-fill: #202332;
+}
+.tree-table-row-cell:even,
+.table-row-cell:even {/*for even row*/
+    -fx-background-color: #E3E5E9;
+}
+
+.tree-table-row-cell:filled:selected,
+.table-row-cell:filled:selected {/*for selected row*/
+    -fx-background-color: #59A5F7;
+
+
+}
+#columnName/*set specific column*/
+{
+    -fx-alignment:center;
+    -fx-font-weight: bold;
+}
+.tree-table-row-cell:hover,
+.table-row-cell:hover {/*for hover mouse on the control*/
+    -fx-background-color: #A9D2EB;
+}
+
+/*set colour for header of treeTableView and tableView*/
+.table-view .column-header,
+.table-view .column-header-background .filler,
+.tree-table-view .column-header,
+.tree-table-view .column-header-background .filler {
+    /*-fx-border-width: 0 1 0 0;*/
+    /*-fx-border-color: #485373 #202332 #485373 #485373;*/
+    -fx-background-color: #10A296;
+}
+
+.tree-table-view {/*remove padding*/
+    -fx-padding: 0;
+}
+
+.tree-table-view .tree-table-cell {
+    -fx-padding: 8 0 8 0;
+    -fx-border-width: 0 1 0 0;
+    /*-fx-border-color: #485373 #202332 #485373 #485373;*/
+}
+.table-view .column-header .label,
+.tree-table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15;
+    -fx-padding: 10 0 10 0;
+
+}
+.tree-table-view .tree-table-row-cell:expanded {
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+
+
+}
+
+.button {
+    -fx-background-color: #10A296;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 17;
+    -fx-border-color: white;
+    -fx-border-width: 0.1;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+
+}
+.button:hover {
+    -fx-background-color: #EF6060;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 17;
+}
+/*set button click when the buttons are clicked*/
+#buttonSaveFile:pressed,
+#buttonOpenFile:pressed,
+#buttonLocation:pressed,
+#buttonTenant:pressed,
+#buttonReport:pressed {
+    -fx-background-color: #9F4040;
+
+}
+#buttonEdit:pressed,
+#buttonEdit {
+    -fx-background-color: #139676;
+}
+#buttonEdit:hover {
+    -fx-background-color: #0C644E;
+}
+#buttonDelete:pressed,
+#buttonDelete {
+    -fx-background-color: #FE6055;
+}
+
+#buttonDelete:hover {
+    -fx-background-color: #A94038;
+}
+.split-pane-divider {/*remove it*/
+    visibility: hidden;
+}
+.split-pane {
+    -fx-background-color: #DFF3EB;
+}
+.check-box {
+    -fx-font-size: 13;
+    -fx-text-fill: #0C644E;
+    -fx-font-weight: bold;
+}
+#textKeyWord{
+    -fx-border-radius: 25px;
+    -fx-background-radius: 25px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+/*#mainSpliter > .split-pane-divider
+{
+visibility: hidden;
+}*/
