@@ -1,5 +1,6 @@
-Languages: JAVA, CSS, SQL
-More information: Read file document
+Languages: JAVA, CSS, SQL.
+
+More information: Read file document (.docx)
 
 Case study:
 
