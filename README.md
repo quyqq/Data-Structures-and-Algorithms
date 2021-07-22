@@ -1,3 +1,5 @@
+Languages: JAVA, CSS, SQL
+
 Case study:
 
 The Australian Bureau of Statistics (ABS) defines a homeless as a person 
